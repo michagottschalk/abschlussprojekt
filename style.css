@@ -1,0 +1,192 @@
+@font-face {
+    font-family: "HK Regular";
+    src:    url("fonts/NeueHansKendrick-Regular.ttf") format("truetype"),
+            url("fonts/NeueHansKendrick-Regular.eot") format("eot"),
+            url("fonts/NeueHansKendrick-Regular.woff") format("woff"),
+            url("fonts/NeueHansKendrick-Regular.woff2") format("woff2"),
+            url("fonts/NeueHansKendrick-Regular.svg") format("svg")
+            ;
+  }
+
+  @font-face {
+    font-family: "HK Bold";
+    src:    url("fonts/NeueHansKendrick-Bold.ttf") format("truetype"),
+            url("fonts/NeueHansKendrick-Bold.eot") format("eot"),
+            url("fonts/NeueHansKendrick-Bold.woff") format("woff"),
+            url("fonts/NeueHansKendrick-Bold.woff2") format("woff2"),
+            url("fonts/NeueHansKendrick-Bold.svg") format("svg")
+            ;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'HK Regular', sans-serif;
+    font-size:1em;
+    color:#333333;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  h1 {
+    font-family: 'HK Bold', sans-serif;
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-family: 'HK Bold', sans-serif;
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-family: 'HK Regular', sans-serif;
+    font-size: 1.2em;
+  }
+
+  h4 {
+    font-family: 'HK Bold', sans-serif;
+    font-size: 1.1em;
+  }
+
+  #container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100px 1fr 10%;
+    grid-template-areas:  
+    "header header header header" 
+    "content content content sidebar" 
+    "footer footer footer footer" 
+  }
+
+  header {
+    grid-area: header;
+    
+  }
+
+  header > div {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  grid-template-areas: "logo menu";
+  align-items: center;
+  }
+
+  header > div > .logo {
+    grid-area: logo;
+    padding-top: 5%;
+  }
+
+  header > div > nav {
+    color: #333333;
+    font-family: 'HK Bold', sans-serif;
+    grid-area: menu;
+  }
+
+  header > div > nav a {
+    padding: 5%;
+    color: #333333;
+    text-decoration: none;
+  }
+
+  header > div > nav a:hover {
+    color: darkgoldenrod;
+  }
+
+  article {
+    grid-area: content;
+    margin-top: 96px;
+    margin-right: 8%;
+  }
+
+  article .image {
+    grid-area: image;
+    margin-right: 5%
+  }
+
+  article .maintext {
+    grid-area: text;
+  }
+
+  article .textfield {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "image text";
+    border-top: 1px solid darkgoldenrod;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    align-items: center;
+  }
+
+  article .textfield .maintext .breadcrump{
+    color:darkgoldenrod;
+    font-size: 0.85em;
+  }
+
+  article .textfield .maintext .breadcrump a {
+    color:darkgoldenrod;
+  }
+
+  article .textfield .maintext h2 {
+    padding-top: 2%;
+  }
+
+  article .textfield .maintext .lead_in {
+    font-size: 0.85em;
+    padding-top: 3%;
+    padding-bottom: 2%;
+  }
+
+  article .textfield .maintext p {
+    padding-top: 2%;
+  }
+
+  article .textfield .maintext .weiterlesen {
+    padding-top: 3%;
+  }
+
+  article .textfield .maintext .weiterlesen a {
+    color:darkgoldenrod;
+  }
+
+aside {
+    grid-area: sidebar;
+    margin-top: 96px;
+}
+
+aside h4 {
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
+
+aside .aside-img img {
+    width:50%;
+   padding-top: 2%;
+}
+
+aside ul {
+    list-style: none;
+    font-size: 1.2em;
+}
+
+aside ul li {
+    padding-top: 2%;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: darkgoldenrod;
+}
+
+aside ul li a:hover {
+    color: #333333;
+}
+
+  footer {
+    background-color: darkgoldenrod;
+    grid-area: footer;
+  }
